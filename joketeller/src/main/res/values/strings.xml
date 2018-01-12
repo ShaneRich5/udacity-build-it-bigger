@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Joke Teller</string>
+    <string name="title_activity_joke">Joke</string>
+    <string name="no_joke_found">No joke found.</string>
+</resources>

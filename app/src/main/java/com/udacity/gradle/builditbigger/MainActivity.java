@@ -1,17 +1,21 @@
 package com.udacity.gradle.builditbigger;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.shane.jokegenerator.JokeGenerator;
 import com.shane.joketeller.JokeActivity;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements JokeCallback {
+    public static final String TAG = MainActivity.class.getSimpleName();
+    JokeAsyncTask jokeAsyncTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +47,15 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tellJoke(View view) {
-        JokeGenerator jokeGenerator = new JokeGenerator();
-        String joke = jokeGenerator.getJoke();
+        if (jokeAsyncTask == null || jokeAsyncTask.getStatus() == AsyncTask.Status.FINISHED) {
+            jokeAsyncTask = new JokeAsyncTask(this);
+            jokeAsyncTask.execute();
+        }
+    }
+
+    @Override
+    public void onJokeLoaded(@NonNull String joke) {
+        Log.i(TAG, "joke: " + joke);
 
         Intent intent = new Intent(MainActivity.this, JokeActivity.class);
         intent.putExtra(JokeActivity.EXTRA_JOKE, joke);

@@ -5,8 +5,9 @@
       <module fileurl="file://$PROJECT_DIR$/BuildItBigger.iml" filepath="$PROJECT_DIR$/BuildItBigger.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/backend/backend.iml" filepath="$PROJECT_DIR$/backend/backend.iml" />
-      <module fileurl="file://$PROJECT_DIR$/jokegenerator/joketeller.iml" filepath="$PROJECT_DIR$/jokegenerator/joketeller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jokegenerator/jokegenerator.iml" filepath="$PROJECT_DIR$/jokegenerator/jokegenerator.iml" />
       <module fileurl="file://$PROJECT_DIR$/joketeller/joketeller.iml" filepath="$PROJECT_DIR$/joketeller/joketeller.iml" />
+      <module fileurl="file://C:\Sites\nanodegree\BuildItBigger\jokegenerator\joketeller.iml" filepath="C:\Sites\nanodegree\BuildItBigger\jokegenerator\joketeller.iml" />
     </modules>
   </component>
 </project>

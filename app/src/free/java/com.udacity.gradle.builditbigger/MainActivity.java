@@ -1,7 +1,6 @@
 package com.udacity.gradle.builditbigger;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import com.google.android.gms.ads.AdListener;
@@ -40,7 +39,6 @@ public class MainActivity extends BaseActivity {
 
     @Override
     public void tellJoke(View view) {
-        Log.i(TAG, "adShown: " + adShown);
         if (interstitialAd.isLoaded() && ! adShown) {
             adShown = true;
             interstitialAd.show();
